@@ -1,11 +1,30 @@
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python
 __pycache__/
 *.py[cod]
-.venv/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
 *.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+.turbo/
+coverage/
+
+# Secrets
 .env
 .env.*
 !.env.example
-node_modules/
-.next/
-coverage/
+*.pem
+*.key
