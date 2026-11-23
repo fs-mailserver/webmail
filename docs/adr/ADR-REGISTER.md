@@ -6,7 +6,7 @@ Original source excerpts retrieved from the user-provided ChatGPT export.
 |---|---|---|
 | [ADR-001](ADR-001.md) | CONTEXTUAL_CONFIRMED | yes |
 | [ADR-002](ADR-002.md) | CONTEXTUAL_CONFIRMED | yes |
-| [ADR-003](ADR-003.md) | UNVERIFIED | no |
+| [ADR-003](ADR-003.md) | USER_CONFIRMED (2026-11-23) | yes |
 | [ADR-004](ADR-004.md) | USER_CONFIRMED | yes |
 | [ADR-005](ADR-005.md) | USER_CONFIRMED | yes |
 | [ADR-006](ADR-006.md) | USER_CONFIRMED | yes |
