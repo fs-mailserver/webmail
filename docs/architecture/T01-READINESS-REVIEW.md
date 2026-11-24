@@ -3,7 +3,7 @@
 **Datum pregleda:** 2026-11-24  
 **Repozitorij:** `fs-mailserver/webmail`, `main`  
 **Opseg:** samo čitanje izvornog sadržaja i dokumentacijska provjera; bez implementacije, izvršavanja testova i deploymenta.  
-**Zaključak:** **CONDITIONAL / DOCUMENTATION GAP** — ne izdavati Implementation GO samo na temelju ovog pregleda.
+**Zaključak (ažurirano 2026-11-24):** **DOCUMENTATION CONSOLIDATED / EXECUTION NOT VERIFIED** — objektivna dokumentacijska evidencija postoji, ali nije izdana Implementation GO i T01 testni kriteriji nisu izvršeni.
 
 ## 1. Provjerene referencije
 
@@ -15,22 +15,20 @@
 | `docs/architecture/IMPLEMENTATION-BLUEPRINT-v1.0-SOURCE.md` | izvorni zapis prisutan |
 | `docs/specifications/T01.md` | prisutan; T01-AC01–T01-AC10 |
 | `docs/execution-orders/T01.md` | prisutan; CP-01–CP-05 i T01-AC01–T01-AC10 |
-| Architecture Baseline v1.0 | **nije pronađen zaseban dokument u trenutačnom Git stablu** |
+| Architecture Baseline v1.0 | Formalna potvrda u ADR-146; dodan **naknadno sastavljeni**, izričito označeni pregled `docs/architecture/ARCHITECTURE-BASELINE-v1.0.md` (izvorni cjeloviti dokument nije objavljen) |
 | `README.md`, `AGENTS.md` | postoje; pravila za odvojene GO ovlasti |
 
 Provjera je provedena nad GitHub `main` nakon commita `f7e03546a2efe510f656cf6cf94cd56e2d974da6`.
 
 ## 2. Otvorena pitanja i blokatori
 
-### DOC-01 — nedostaje zaseban Architecture Baseline v1.0 (dokumentacijski blokator)
+### DOC-01 — Architecture Baseline v1.0: riješeno objedinjavanjem uz oznaku podrijetla
 
-Blueprint, P1-01 i T01 nalog pozivaju se na Architecture Baseline v1.0. U provjerenom Git stablu nije pronađena datoteka s tim nazivom.
+Izvoz razgovora potvrđuje formalno zaključavanje Baselinea kroz ADR-146 (22. 11. 2026.), ali ne sadrži zasebno objavljen puni izvorni Baseline dokument. Dodan je pregled `docs/architecture/ARCHITECTURE-BASELINE-v1.0.md` koji jasno navodi da je riječ o naknadnoj konsolidaciji ADR/P1/Blueprint izvora, a ne povijesnom doslovnom izvorniku. Taj pregled ima referencije i eksplicitne GO granice. **Status dokumentacijske dostupnosti: RESOLVED WITH PROVENANCE QUALIFICATION**.
 
-**Preporučena radnja:** pronaći puni izvornik u korisničkom ChatGPT izvozu, sačuvati izvornu verziju i potvrdu te provjeriti usklađenost s ADR-001–146. Ne rekonstruirati povijesni izvor iz sažetaka.
+### DOC-02 — zastarjela tvrdnja u README.md: riješeno
 
-### DOC-02 — zastarjela tvrdnja u README.md (dokumentacijsko odstupanje)
-
-`README.md` još tvrdi da puni izvorni tekstovi ADR-ova nisu verificirani. Nakon obnove ADR-001–146, ta je tvrdnja zastarjela. Potrebno je ažurirati status uz očuvanje oznake kontekstualne potvrde za ADR-001/002.
+`README.md` je usklađen s obnovljenom ADR evidencijom i razlikovanjem povijesne potvrde od naknadno sastavljenog Baseline pregleda. **Status: RESOLVED**.
 
 ### DOC-03 — arhivirane specifikacije sadrže povijesne UI oznake (uredničko ograničenje)
 
@@ -50,4 +48,12 @@ Nisu pokretani buildovi, testovi, Docker niti mrežne provjere. T01-AC01–T01-A
 - **Implementation:** nije odobrena ovim pregledom.
 - **Git/PR, merge, deployment:** zasebne ovlasti; nisu odobrene ovim pregledom.
 - **Production:** nije dirana.
-- **Sljedeći korak:** obnoviti Architecture Baseline v1.0 iz izvoza razgovora, zatim ažurirati ovaj readiness pregled prije eventualnog zahtjeva za zasebni T01 Implementation GO.
+- **Sljedeći korak:** provjeriti preflight uvjete T01 prema stvarnom izvršnom okruženju i odvojeno zatražiti T01 Implementation GO. Ova dokumentacijska provjera ne predstavlja izvršni PASS niti autorizaciju za kodiranje.
+
+## 5. Evidencija ažuriranja 2026-11-24
+
+- Izvoz razgovora potvrđuje da je Architecture Baseline v1.0 **zaključen kao odluka**, ali njegov zaseban puni dokument nije povijesno objavljen.
+- Dodan je retrospektivni, jasno označeni `ARCHITECTURE-BASELINE-v1.0.md`, s referencijama na izvore i preuzetim granicama Paketa 1.
+- `README.md` je usklađen s obnovljenim ADR dokumentima.
+- **T01-AC01–T01-AC10: NOT VERIFIED**; nisu izvršavani testovi, build, Docker, migracije ili deployment.
+- **Implementation GO: NIJE IZDAN.**
