@@ -17,9 +17,13 @@ New clean monorepo foundation for the Webmail project (T01 scaffold).
 Only directory skeleton and project conventions are present. No application,
 database migration, mailserver integration, or deployment is included.
 
-Architecture Baseline v1.0 and ADR-001–146 were discussed and approved in previous
-project conversations, but their complete original texts have not been verified.
-Do not reconstruct or label missing documents as verified.
+ADR-001–146 source records and their approval evidence were recovered from the
+user-provided ChatGPT export under `docs/adr/`. ADR-001/002 have contextual
+confirmation; ADR-003–146 have explicit confirmation. See `docs/adr/ADR-REGISTER.md`.
+Architecture Baseline v1.0 is formally approved by ADR-146; the separately
+compiled overview in `docs/architecture/ARCHITECTURE-BASELINE-v1.0.md` is
+clearly labeled as retrospective, not as a recovered verbatim original.
+See `docs/architecture/T01-READINESS-REVIEW.md` for documentation readiness.
 
 Any further implementation, PR/merge, infrastructure changes, and deployment require
 separate explicit GO.
